@@ -16,6 +16,8 @@ type Grade = 'A' | 'B' | 'F';
 export default class ControlFlowComponent {
   public showContent = signal(false);
   public grade = signal<Grade>('A');
+  public frameworks = signal(['Angular', 'Vue', 'Svelte', 'Qwick'])
+  public frameworks2 = signal([])
 
   public toggleContent(): void {
     this.showContent.update((value) => !value);
