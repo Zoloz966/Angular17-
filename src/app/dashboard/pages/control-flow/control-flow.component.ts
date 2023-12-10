@@ -17,10 +17,20 @@ type Grade = 'A' | 'B' | 'F';
 export default class ControlFlowComponent {
   public showContent = signal(false);
   public grade = signal<Grade>('A');
-  public frameworks = signal(['Angular', 'Vue', 'Svelte', 'Qwick', 'React'])
-  public frameworks2 = signal([])
+  public frameworks = signal(['Angular', 'Vue', 'Svelte', 'Qwick', 'React']);
+  public frameworks2 = signal([]);
+
+  public selectButtons: { name: Grade }[] = [
+    { name: 'A' },
+    { name: 'B' },
+    { name: 'F' },
+  ];
 
   public toggleContent(): void {
     this.showContent.update((value) => !value);
+  }
+
+  public changeGrade(value: Grade) {
+    this.grade.update((grade) => (grade = value));
   }
 }
