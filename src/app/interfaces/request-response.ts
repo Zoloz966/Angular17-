@@ -7,7 +7,25 @@ export interface UsersResponse {
   support: Support;
 }
 
+export interface UserResponse {
+  data: User;
+  support: Support;
+}
+
 export interface User {
+  id: number;
+  email: string;
+  first_name: string;
+  last_name: string;
+  avatar: string;
+}
+
+export interface Support {
+  url: string;
+  text: string;
+}
+
+export interface Data {
   id: number;
   email: string;
   first_name: string;
