@@ -16,7 +16,7 @@ import { TitleComponent } from '@shared/title/title.component';
         height="300"
         style="view-transition-name: hero1"
       />
-      <div class="fixed bottom-16 right-10 bg-blue-800 w-32 h-32" style="view-transition-name: hero2">
+      <div class="absolute bottom-16 right-10 bg-blue-800 w-32 h-32" style="view-transition-name: hero2">
         EL DIV
       </div>
     </section>
